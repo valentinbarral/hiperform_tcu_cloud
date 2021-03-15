@@ -1,0 +1,591 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: D_INV VCU_POLITO PCU APA EPB EPS ESP SAS VSP GW
+
+
+VAL_TABLE_ Table_DirReq 3 "not allowed" 2 "back" 1 "forward" 0 "not allowed" ;
+VAL_TABLE_ Table_ModeReq 3 "Service" 2 "Recovery" 1 "Normal" 0 "Idle" ;
+
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ DirectionReq_A : 60|2@0+ (1,0) [0|0] "NA"  D_INV
+ SG_ VCUSft : 33|2@0+ (1,0) [0|3] ""  APA,EPB,EPS,ESP,VSP
+ SG_ VCUKeySta : 35|2@0+ (1,0) [0|3] ""  VSP
+ SG_ AccPed1 : 23|8@0+ (1,0) [0|255] ""  APA,EPB,ESP
+ SG_ VCUCnt07 : 27|4@0+ (1,0) [0|15] ""  ESP
+ SG_ VCUCsm07 : 15|8@0+ (1,0) [0|255] ""  ESP
+ SG_ BrkPed1 : 7|8@0+ (1,0) [0|255] ""  EPB
+ SG_ TMSpd : 47|16@0+ (0.25,0) [0|16063.75] "rpm"  EPB,ESP,VSP
+ SG_ HHCSts : 11|2@0+ (1,0) [0|3] ""  EPB
+ SG_ TMTrq : 9|10@0+ (1,0) [0|1023] "Nm"  EPB,ESP
+ SG_ PCUCnt : 15|4@0+ (1,0) [1|15] ""  ESP
+ SG_ PCUCsm : 7|8@0+ (1,0) [0|255] ""  ESP
+ SG_ FunctionLampSts : 14|1@0+ (1,0) [0|1] ""  GW
+ SG_ EPBSenCalSta : 15|1@0+ (1,0) [0|1] ""  GW
+ SG_ FailureLampSts : 33|2@0+ (1,0) [0|3] ""  GW
+ SG_ EPBSWSts : 35|2@0+ (1,0) [0|3] ""  ESP,GW
+ SG_ AVHSwt : 12|1@0+ (1,0) [0|1] ""  ESP,GW
+ SG_ BrakelightReq : 13|1@0+ (1,0) [0|1] ""  GW
+ SG_ CCCancelReq : 23|1@0+ (1,0) [0|1] ""  GW
+ SG_ DynAplySt : 38|3@0+ (1,0) [0|3] ""  GW
+ SG_ EPBDTC : 47|8@0+ (1,0) [0|255] ""  GW
+ SG_ EPBSys : 22|3@0+ (1,0) [0|5] ""  APA,ESP,GW
+ SG_ CDPrequest : 39|1@0+ (1,0) [0|1] ""  ESP
+ SG_ Decelerationrequest : 19|12@0+ (1,-20.48) [0|4095] ""  ESP
+ SG_ EPBCnt : 11|4@0+ (1,0) [0|15] ""  GW
+ SG_ EPBChecksum : 7|8@0+ (1,0) [0|255] ""  GW
+ SG_ EPBGrad : 63|8@0+ (1,100) [0|255] ""  GW
+ SG_ EPBHWVer : 49|2@0+ (1,0) [0|255] ""  GW
+ SG_ EPBSWVer : 55|6@0+ (1,0) [0|255] ""  GW
+ SG_ ABSCsm : 7|8@0+ (1,0) [0|255] ""  EPB,GW
+ SG_ ABSCnt : 15|4@0+ (1,0) [0|15] ""  EPB,GW
+ SG_ ABSWhlRRSpd : 11|13@0+ (0.05625,0) [0|299.98] ""  APA,EPB,GW
+ SG_ ABSWhlRLSpd : 30|13@0+ (0.05625,0) [0|299.98] ""  APA,EPB,GW
+ SG_ ABSWhlFRSpd : 33|13@0+ (0.05625,0) [0|299.98] ""  EPB,GW
+ SG_ ABSWhlFLSpd : 52|13@0+ (0.05625,0) [0|299.98] ""  EPB,GW
+ SG_ VCUMod_PCU : 3|4@0+ (1,0) [0|15] ""  VSP
+ SG_ VCUSta : 49|2@0+ (1,0) [0|3] ""  EPB
+ SG_ BrkPedSts : 63|2@0+ (1,0) [0|3] ""  APA,EPB,ESP
+ SG_ VCUCsm0 : 31|8@0+ (1,0) [0|255] ""  ESP
+ SG_ VCUCnt : 15|4@0+ (1,0) [1|15] ""  ESP
+
+BO_ 337 D_INV_DEBUG_Q_CURR: 8 D_INV
+ SG_ Iq_target_B : 55|11@0- (1,0) [0|0] "A"  VCU_POLITO
+ SG_ Iq_target_A : 39|11@0- (1,0) [0|0] "A"  VCU_POLITO
+ SG_ Iq_meas_B : 23|11@0- (1,0) [0|0] "A"  VCU_POLITO
+ SG_ Iq_meas_A : 7|11@0- (1,0) [0|0] "A"  VCU_POLITO
+
+BO_ 336 D_INV_TORQUE: 8 D_INV
+ SG_ MaxTrqAvailable_B : 55|14@0+ (0.1,-819) [-819|819] "Nm"  VCU_POLITO
+ SG_ MaxTrqAvailable_A : 39|14@0+ (0.1,-819) [-819|819] "Nm"  VCU_POLITO
+ SG_ TrqAct_B : 23|14@0+ (0.1,-819) [-819|819] "Nm"  VCU_POLITO
+ SG_ TrqAct_A : 7|14@0+ (0.1,-819) [-819|819] "Nm"  VCU_POLITO
+
+BO_ 326 D_INV_MECH_SIGNALS: 8 D_INV
+ SG_ MechPostn_B : 55|10@0+ (0.01,0) [0|0] "rad"  VCU_POLITO
+ SG_ MechPostn_A : 39|10@0+ (0.01,0) [0|0] "rad"  VCU_POLITO
+ SG_ MechSpeed_B : 23|12@0- (1,0) [-2048|2047] "rpm"  VCU_POLITO
+ SG_ MechSpeed_A : 7|12@0- (1,0) [-2048|2047] "rpm"  VCU_POLITO
+
+BO_ 328 D_INV_DEBUG_D_CURR: 8 D_INV
+ SG_ Id_meas_B : 55|11@0- (1,0) [0|0] "A"  VCU_POLITO
+ SG_ Id_meas_A : 39|11@0- (1,0) [0|0] "A"  VCU_POLITO
+ SG_ Id_target_B : 23|11@0- (1,0) [0|0] "A"  VCU_POLITO
+ SG_ Id_target_A : 7|11@0- (1,0) [0|0] "A"  VCU_POLITO
+
+BO_ 327 D_INV_ELECT_SIGNAL: 8 D_INV
+ SG_ I_DC_B : 39|10@0- (1,0) [0|0] "A"  VCU_POLITO
+ SG_ I_DC_A : 19|10@0- (1,0) [0|0] "A"  VCU_POLITO
+ SG_ V_DCBus_B : 13|10@0+ (1,0) [0|0] "V"  VCU_POLITO
+ SG_ V_DCBus_A : 7|10@0+ (1,0) [0|0] "V"  VCU_POLITO
+
+BO_ 329 D_INV_TEMPERATURE: 8 D_INV
+ SG_ MotorB_Temp : 39|8@0+ (1,-40) [-40|180] "°C"  VCU_POLITO
+ SG_ MotorA_Temp : 31|8@0+ (1,-40) [-40|180] "°C"  VCU_POLITO
+ SG_ InvB_Temp : 23|8@0+ (1,-40) [-40|175] "°C"  VCU_POLITO
+ SG_ InvA_temp : 15|8@0+ (1,-40) [-40|175] "°C"  VCU_POLITO
+ SG_ InvCtrlTemp : 7|8@0+ (1,-40) [-40|150] "°C"  VCU_POLITO
+
+BO_ 325 D_INV_IMU2: 8 D_INV
+ SG_ gyro_y : 39|16@0- (0.01,0) [-327.68|327.67] "rad/s"  VCU_POLITO
+ SG_ gyro_x : 23|16@0- (0.01,0) [-327.68|327.67] "rad/s"  VCU_POLITO
+ SG_ yawrate : 7|16@0- (0.01,0) [-327.68|327.67] "rad/s"  VCU_POLITO
+
+BO_ 324 D_INV_IMU1: 8 D_INV
+ SG_ ay : 23|12@0- (0.01,0) [-20.48|20.47] "m/s2"  VCU_POLITO
+ SG_ ax : 7|12@0- (0.01,0) [-20.48|20.47] "m/s2"  VCU_POLITO
+
+BO_ 323 D_INV_STATE: 8 D_INV
+ SG_ InvB_Sts : 31|8@0+ (1,0) [0|255] "NA"  VCU_POLITO
+ SG_ InvA_Sts : 23|8@0+ (1,0) [0|255] "NA"  VCU_POLITO
+ SG_ InvCtrl_Sts : 15|8@0+ (1,0) [0|255] "NA"  VCU_POLITO
+ SG_ ModeAct : 7|8@0+ (1,0) [0|0] "NA"  VCU_POLITO
+
+BO_ 565 VCU_EVCAN_F00: 8 VCU_POLITO
+ SG_ BMSFan1Cmd : 43|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMSPTCCmd : 53|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMSFan2Cmd : 41|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ HVBThmlMod : 11|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ HVBFan1PWM : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ HVBFan2PWM : 31|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCUCnt : 15|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCUMod_PCU : 3|4@0+ (1,0) [0|0] ""  PCU
+ SG_ VCUSub1Mod4_PCU : 7|4@0+ (1,0) [0|0] ""  PCU
+ SG_ VCUSta : 49|2@0+ (1,0) [0|0] ""  PCU
+ SG_ TMDirCmd : 45|2@0+ (1,0) [0|0] ""  PCU
+ SG_ TMIGBTCmd : 55|2@0+ (1,0) [0|0] ""  PCU
+ SG_ TMStaCmd : 57|2@0+ (1,0) [0|0] ""  PCU
+ SG_ TMTrqCmd : 39|10@0+ (1,0) [0|0] ""  PCU
+ SG_ BrkPedSts : 63|2@0+ (1,0) [0|0] ""  PCU
+ SG_ TMPrechgReq : 61|2@0+ (1,0) [0|0] ""  PCU
+ SG_ TMDchReq : 59|2@0+ (1,0) [0|0] ""  PCU
+ SG_ HVSta : 51|2@0+ (1,0) [0|0] ""  PCU
+
+BO_ 530 PCU_EVCAN_F00: 8 PCU
+ SG_ TMDchSts : 63|2@0+ (1,0) [0|0] ""  VCU_POLITO
+ SG_ TMDirSts : 61|2@0+ (1,0) [0|0] ""  VCU_POLITO
+ SG_ TMIGBTSts : 57|2@0+ (1,0) [0|0] ""  VCU_POLITO
+ SG_ TMSts : 59|2@0+ (1,0) [0|0] ""  VCU_POLITO
+ SG_ TMSpd : 47|16@0+ (0.25,0) [0|0] ""  VCU_POLITO
+ SG_ TMTrq : 9|10@0+ (1,0) [0|0] ""  VCU_POLITO
+ SG_ PCUDTC : 31|8@0+ (1,0) [0|0] ""  VCU_POLITO
+ SG_ PCUInpVol : 39|8@0+ (4,0) [0|0] ""  VCU_POLITO
+ SG_ HHCSts : 11|2@0+ (1,0) [0|0] ""  VCU_POLITO
+ SG_ PCUCnt : 15|4@0+ (1,0) [0|0] ""  VCU_POLITO
+ SG_ PCUCsm : 7|8@0+ (1,0) [0|0] ""  VCU_POLITO
+
+BO_ 681 GEPB_CCAN_F00: 8 VCU_POLITO
+ SG_ FunctionLampSts : 14|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EPBSenCalSta : 15|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ FailureLampSts : 33|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AVHSwt : 12|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EPBSWSts : 35|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BrakelightReq : 13|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ CCCancelReq : 23|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DynAplySt : 38|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EPBDTC : 47|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EPBSys : 22|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EPBCnt : 11|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EPBChecksum : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EPBGrad : 63|8@0+ (1,100) [0|0] ""  PCU
+ SG_ EPBHWVer : 49|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ EPBSWVer : 55|6@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 566 BMS_EVCAN_F00: 8 VCU_POLITO
+ SG_ HVBCur : 55|16@0+ (0.1,-300) [0|0] ""  PCU
+ SG_ HVBVol : 39|16@0+ (0.1,0) [0|0] "V"  PCU
+ SG_ HVBDTC : 31|8@0+ (1,0) [0|0] ""  PCU
+ SG_ LBCstorageflag : 17|2@0+ (1,0) [0|0] ""  PCU
+ SG_ RelCutReq : 11|2@0+ (1,0) [0|0] ""  PCU
+ SG_ ChgPmt : 9|2@0+ (1,0) [0|0] ""  PCU
+ SG_ DchPmt : 23|2@0+ (1,0) [0|0] ""  PCU
+ SG_ BMSHWFltLne : 21|2@0+ (1,0) [0|0] ""  PCU
+ SG_ BMSCnt0 : 15|4@0+ (1,0) [0|0] ""  PCU
+ SG_ BMSCsm0 : 7|8@0+ (1,0) [0|0] ""  PCU
+
+BO_ 1640 VCU_EVCAN_F07: 8 VCU_POLITO
+ SG_ HHCmd : 39|2@0+ (1,0) [0|0] ""  PCU
+ SG_ VCUDTC : 55|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ HVBSOCVCU : 63|8@0+ (0.5,0) [0|0] "" Vector__XXX
+ SG_ HVBSOH : 47|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ VCUSft : 33|2@0+ (1,0) [0|0] ""  PCU
+ SG_ VCUKeySta : 35|2@0+ (1,0) [0|0] ""  PCU
+ SG_ BrkLgtSts : 37|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AccPed1 : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AccPed2 : 31|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BrkPed1 : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BrkPed2 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 570 GABS_CCAN_F00: 8 VCU_POLITO
+ SG_ ESCCsm : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ESCCnt : 15|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ ESCWhlRRSpd : 11|13@0+ (0.05625,0) [0|0] ""  PCU
+ SG_ ESCWhlRLSpd : 30|13@0+ (0.05625,0) [0|0] ""  PCU
+ SG_ ESCWhlFRSpd : 33|13@0+ (0.05625,0) [0|0] ""  PCU
+ SG_ ESCWhlFLSpd : 52|13@0+ (0.05625,0) [0|0] ""  PCU
+
+BO_ 2027 PCU_EVCAN_F02: 8 PCU
+ SG_ UpdPCUStart : 7|64@0+ (1,0) [0|0] ""  VCU_POLITO
+
+BO_ 1042 PCU_EVCAN_F03: 8 PCU
+ SG_ UpdPCUSucc : 11|2@0+ (1,0) [0|0] ""  VCU_POLITO
+
+BO_ 2019 PCU_EVCAN_F04: 8 PCU
+ SG_ UpdPCUPakByte : 7|64@0+ (1,0) [0|0] ""  VCU_POLITO
+
+BO_ 241 PXI2PXI_1: 8 Vector__XXX
+ SG_ FRW_Tq_Nm : 0|16@1+ (0.0244140625,-800) [-800|800] "Nm" Vector__XXX
+ SG_ FLW_Tq_Nm : 16|16@1+ (0.0244140625,-800) [-800|800] "Nm" Vector__XXX
+ SG_ RRW_Tq_Nm : 32|16@1+ (0.0244140625,-800) [-800|800] "Nm" Vector__XXX
+ SG_ RLW_Tq_Nm : 48|16@1+ (0.0244140625,-800) [-800|800] "Nm" Vector__XXX
+
+BO_ 242 PXI2PXI_2: 8 Vector__XXX
+ SG_ FRW_Brk_Tq_Nm : 0|16@1+ (0.06103515625,0) [0|4000] "Nm" Vector__XXX
+ SG_ FLW_Brk_Tq_Nm : 16|16@1+ (0.06103515625,0) [0|4000] "Nm" Vector__XXX
+ SG_ RRW_Brk_Tq_Nm : 32|16@1+ (0.06103515625,0) [0|4000] "Nm" Vector__XXX
+ SG_ RLW_Brk_Tq_Nm : 48|16@1+ (0.06103515625,0) [0|4000] "Nm" Vector__XXX
+
+BO_ 243 PXI2PXI_3: 8 Vector__XXX
+ SG_ Steering_wheel : 0|16@1+ (3.0517578125e-05,-1) [-1|1] "" Vector__XXX
+ SG_ Ay_Tec : 16|16@1+ (0.000625,-20.48) [-20.48|20.47] "Nm" Vector__XXX
+ SG_ Ax_Tec : 32|16@1+ (0.000625,-20.48) [-20.48|20.47] "Nm" Vector__XXX
+ SG_ YawRate_Tec : 48|16@1+ (0.01,-327.67) [-327.67|327.68] "Nm" Vector__XXX
+
+BO_ 244 PXI2PXI_4: 8 Vector__XXX
+ SG_ FRW_Speed_rads : 0|16@1+ (0.006103515625,-200) [-200|200] "rad" Vector__XXX
+ SG_ FLW_Speed_rads : 16|16@1+ (0.006103515625,-200) [-200|200] "rad" Vector__XXX
+ SG_ RRW_Speed_rads : 32|16@1+ (0.006103515625,-200) [-200|200] "rad" Vector__XXX
+ SG_ RLW_Speed_rads : 48|16@1+ (0.006103515625,-200) [-200|200] "rad" Vector__XXX
+
+BO_ 245 PXI2PXI_5: 8 Vector__XXX
+ SG_ Vehicle_Chassis_Speed_Kmh : 0|16@1+ (0.0076293945313,-250) [-250|250] "km" Vector__XXX
+ SG_ Acc_pedal : 16|8@1+ (0.00390625,0) [0|1] "" Vector__XXX
+ SG_ Brk_pedal : 24|8@1+ (0.00390625,0) [0|1] "" Vector__XXX
+ SG_ Kl15 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ParkingBrake : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gearbox_D : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gearbox_N : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Gearbox_R : 36|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SideSlipAngle : 40|16@1+ (0.000305176,-10) [-10|10] "rad" Vector__XXX
+ SG_ MC_Switch : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 246 TP_01: 8 Vector__XXX
+ SG_ RR_W_Tq : 0|16@1+ (0.030517578125,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ RR_W_Speed : 16|16@1+ (0.00610352,-200) [-200|200] "rads" Vector__XXX
+ SG_ RL_W_Tq : 32|16@1+ (0.0305176,-1000) [-1000|1000] "Nm" Vector__XXX
+ SG_ RL_W_Speed : 48|16@1+ (0.006103515625,-200) [-200|200] "rads" Vector__XXX
+
+BO_ 247 TP_02: 8 Vector__XXX
+ SG_ Vehicle_Speed : 0|8@1+ (1,0) [0|255] "Kmh" Vector__XXX
+ SG_ BMS_VDC : 8|8@1+ (1.9607843137,0) [0|500] "V" Vector__XXX
+ SG_ BMS_Power : 16|16@1+ (0.015258789063,-500) [-500|500] "Kw" Vector__XXX
+ SG_ BMS_SOC : 48|8@1+ (0.390625,0) [0|100] "per" Vector__XXX
+ SG_ BMSCurrent : 32|16@1+ (0.0152588,-500) [-500|500] "A" Vector__XXX
+
+BO_ 248 TP_03: 8 Vector__XXX
+ SG_ Total_Consumption : 0|16@1+ (0.0076293945313,0) [0|500] "Kwh" Vector__XXX
+ SG_ Average_Consumption : 16|16@1+ (0.015258789063,-500) [-500|500] "Kwh/100" Vector__XXX
+ SG_ Total_Distance : 40|16@1+ (0.0076293945313,0) [0|500] "Km" Vector__XXX
+ SG_ P : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ D : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ N : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ R : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LiveBit : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ KL15 : 37|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 309 SAS_CCAN_F00: 8 SAS
+ SG_ SAS_1_MsgCounter : 3|4@0+ (1,0) [0|15] ""  ESP
+ SG_ SAS_1_Checksum : 7|4@0+ (1,0) [0|15] ""  ESP
+ SG_ SAS_SteeringAngleVD : 8|1@0+ (1,0) [0|1] ""  ESP
+ SG_ SAS_CalibratedSt : 9|1@0+ (1,0) [0|1] ""  ESP
+ SG_ SAS_TrimmingStatus : 10|1@0+ (1,0) [0|1] ""  ESP
+ SG_ SAS_InterStFlags : 15|5@0+ (1,0) [0|31] ""  ESP
+ SG_ SAS_SteeringAngleSpd : 23|8@0+ (4,0) [0|254] ""  ESP,GW
+ SG_ SAS_SteeringAngle : 31|16@0+ (0.1,-780) [0|15600] ""  ESP,GW
+
+BO_ 666 GICM_BCAN_F00: 8 GW
+ SG_ DorStaFL : 62|1@0+ (1,0) [0|1] ""  EPB,ESP
+ SG_ DriverSideSeatbelt : 58|1@0+ (1,0) [0|1] ""  APA,EPB,ESP
+
+BO_ 1084 AC_CCAN_F01: 8 GW
+ SG_ EnvTpt : 39|16@0+ (1,-40) [-40|125] ""  APA,EPB,ESP
+ SG_ ACDTC : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 419 EPS_CCAN_00: 8 EPS
+ SG_ EPSSA : 7|16@0+ (1,0) [0|65535] ""  GW
+ SG_ StrSysStatus : 31|3@0+ (1,0) [0|7] ""  GW
+ SG_ EleStrFailFlag : 20|3@0+ (1,0) [0|7] ""  GW
+ SG_ StrSysID : 26|3@0+ (1,0) [0|7] ""  GW
+ SG_ EPSDir : 23|3@0+ (1,0) [0|7] ""  APA,GW
+ SG_ StrAngle : 38|15@0+ (0.04375,0) [0|32765] ""  APA,GW
+ SG_ StrAngleSpd : 54|15@0+ (0.04375,0) [0|32765] ""  GW
+
+BO_ 421 EPS_CCAN_02: 8 EPS
+ SG_ EPSDTC : 63|8@0+ (1,0) [0|255] ""  APA,GW
+ SG_ HSConectSta : 12|1@0+ (1,0) [0|1] ""  APA
+ SG_ HSStartAllow : 11|1@0+ (1,0) [0|1] ""  APA
+ SG_ HSStartCtrlSta : 10|1@0+ (1,0) [0|1] ""  APA
+ SG_ EPSMODE : 9|2@0+ (1,0) [0|3] ""  APA
+ SG_ ESPActSteeringTrq : 7|8@0+ (1,0) [0|255] ""  APA
+ SG_ StrAngleSpdDir : 21|3@0+ (1,0) [0|7] ""  GW
+ SG_ EPSSWVer : 47|8@0+ (1,0) [0|255] ""  GW
+ SG_ EPSHWVer : 55|8@0+ (1,0) [0|255] ""  GW
+
+BO_ 824 GVCU_EVCAN_F01: 8 GW
+ SG_ ReadyInd : 48|1@0+ (1,0) [0|1] ""  EPB,EPS
+ SG_ TMFltInd : 50|1@0+ (1,0) [0|1] ""  EPB
+ SG_ ShfFltInd : 60|1@0+ (1,0) [0|1] ""  EPB
+
+BO_ 810 ABS_CCAN_F01: 8 ESP
+ SG_ ABSFailed : 10|1@0+ (1,0) [0|1] ""  EPB,GW
+ SG_ EBDFailed : 9|1@0+ (1,0) [0|1] ""  GW
+ SG_ ABSActive : 8|1@0+ (1,0) [0|1] ""  EPB,GW
+ SG_ VehSpd : 23|15@0+ (0.05625,0) [0|299.98] ""  APA,EPS,VSP,GW
+ SG_ VehSpdVd : 24|1@0+ (1,0) [0|1] ""  EPB,EPS,VSP,GW
+ SG_ RRWheelRollingCounter : 39|16@0+ (1,0) [0|65534] ""  APA,EPB
+ SG_ LRWheelRollingCounter : 55|16@0+ (1,0) [0|65534] ""  APA,EPB
+
+BO_ 1659 GVCU_EVCAN_F08: 8 GW
+ SG_ VCUSub1Mod4 : 3|4@0+ (1,0) [0|7] "" Vector__XXX
+ SG_ ChgLgt : 49|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ RmtWkupSts : 39|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVILSta : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ DCccSig : 53|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ DriveModeSwch : 55|2@0+ (1,0) [0|3] ""  EPB
+
+BO_ 1560 GVCU_EVCAN_F09: 8 GW
+ SG_ VCU12V : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ VCU5V : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ CoolTpt : 15|8@0+ (1,-40) [0|255] "" Vector__XXX
+ SG_ TrqCmd : 47|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ RegenStp : 43|4@0+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 1522 GMP5_BCAN_F06: 8 GW
+ SG_ VSPSwch : 57|2@0+ (1,0) [0|3] ""  VSP
+ SG_ MP5APAStaDirReq : 59|2@0+ (1,0) [0|3] ""  APA
+ SG_ MP5APARunReq : 41|2@0+ (1,0) [0|3] ""  APA
+ SG_ MP5APARunReqVd : 43|2@0+ (1,0) [0|3] ""  APA
+ SG_ MP5APAStopReq : 45|2@0+ (1,0) [0|3] ""  APA
+ SG_ MP5APAStopReqVd : 47|2@0+ (1,0) [0|3] ""  APA
+
+BO_ 683 GBCM_BCAN_F00: 8 GW
+ SG_ Keystate : 42|3@0+ (1,0) [0|3] ""  APA,EPB,ESP
+ SG_ BCMTurnSwitch : 9|2@0+ (1,0) [0|3] ""  APA
+ SG_ BCMHazardSwitch : 10|1@0+ (1,0) [0|1] ""  APA
+
+BO_ 717 GBCM_BCAN_F01: 8 GW
+ SG_ RLDoorStatus : 59|1@0+ (1,0) [0|1] ""  APA
+ SG_ RRDoorStatus : 58|1@0+ (1,0) [0|1] ""  APA
+ SG_ PsgDoorStatus : 57|1@0+ (1,0) [0|1] ""  APA
+ SG_ DrvDoorStatus : 56|1@0+ (1,0) [0|1] ""  APA
+
+BO_ 273 GVCU_EVCAN_F20: 8 GW
+ SG_ VCUCsm20 : 7|8@0+ (1,0) [0|255] ""  ESP
+ SG_ VCUCnt20 : 15|4@0+ (1,0) [0|15] ""  ESP
+ SG_ AccPedCru : 31|8@0+ (1,0) [0|255] ""  ESP
+ SG_ VCUDrvrReqTq : 51|12@0+ (1,-128) [0|1278] ""  ESP
+ SG_ VCUTgtSft : 47|2@0+ (1,0) [0|3] ""  ESP
+ SG_ VCUTgtSftVd : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ TgtTqVd : 8|1@0+ (1,0) [0|1] ""  ESP
+ SG_ AccPdlVd : 9|1@0+ (1,0) [0|1] ""  ESP
+ SG_ AVHFunctionSta : 39|2@0+ (1,0) [0|3] ""  EPB
+ SG_ PackFunctionVd : 34|1@0+ (1,0) [0|1] ""  EPB
+ SG_ AVHEnable : 37|2@0+ (1,0) [0|3] ""  EPB
+
+BO_ 612 GVCU_EVCAN_F03: 8 GW
+ SG_ PlugSts : 39|2@0+ (1,0) [0|3] ""  VSP
+ SG_ ChgSta : 37|2@0+ (1,0) [0|3] ""  VSP
+
+BO_ 1777 VSP_CCAN_F00: 8 VSP
+ SG_ VSPHWVer : 55|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ VSPSWVer : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ VSPDTC : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1199 ESC_CCAN_F06: 8 ESP
+ SG_ SAS_CmdCodeWord : 3|4@0+ (1,0) [0|15] ""  SAS
+
+BO_ 517 ESC_CCAN_F02: 8 ESP
+ SG_ YawRate : 7|16@0+ (0.01,-327.6) [327.6|327.6] ""  GW
+ SG_ LongAccVd : 18|1@0+ (1,0) [0|1] ""  APA,GW
+ SG_ LongAcc : 17|10@0+ (0.01,-1.27) [-1.27|1.27] ""  APA,GW
+ SG_ HDCStatus : 20|2@0+ (1,0) [0|3] ""  GW
+ SG_ VDCFailure : 32|1@0+ (1,0) [0|1] ""  GW
+ SG_ TCSFailure : 33|1@0+ (1,0) [0|1] ""  GW
+ SG_ ESCCsm_205 : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ ESCCnt205 : 55|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ ESCSw : 21|1@0+ (1,0) [0|1] ""  GW
+ SG_ ESCSwVd : 22|1@0+ (1,0) [0|1] ""  GW
+ SG_ HBBstatus : 38|3@0+ (1,0) [0|7] ""  GW
+ SG_ HBBActive : 39|1@0+ (1,0) [0|1] ""  GW
+ SG_ BrkPrsVd : 51|1@0+ (1,0) [0|1] ""  GW
+ SG_ BrkPrs : 50|11@0+ (1,0) [0|190] ""  GW
+ SG_ AVHstandby : 23|1@0+ (1,0) [0|1] ""  EPB,GW
+
+BO_ 812 ESC_CCAN_F03: 8 ESP
+ SG_ ESCFLWheelDir : 9|2@0+ (1,0) [0|2] "km/h"  GW
+ SG_ ESCFRWheelDir : 11|2@0+ (1,0) [0|2] "km/h"  GW
+ SG_ ESCRLWheelDir : 13|2@0+ (1,0) [0|2] "km/h"  GW
+ SG_ ESCRRWheelDir : 15|2@0+ (1,0) [0|2] "km/h"  GW
+ SG_ ESCCounter3 : 23|4@0+ (1,0) [0|15] ""  GW
+ SG_ FRWheelSpdPulse : 39|16@0+ (1,0) [0|2046] ""  GW
+ SG_ FLWheelSpdPulse : 55|16@0+ (1,0) [0|2046] ""  GW
+
+BO_ 430 ESC_CCAN_F01: 8 ESP
+ SG_ ESCCheckSum1 : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ ABSItvInProgress : 8|1@0+ (1,0) [0|1] ""  GW
+ SG_ VDCItvInProgress : 9|1@0+ (1,0) [0|1] ""  GW
+ SG_ TCSItvInProgress : 10|1@0+ (1,0) [0|1] ""  GW
+ SG_ AVHactive : 11|1@0+ (1,0) [0|1] ""  EPB,GW
+ SG_ AutoHoldAvailable : 38|1@0+ (1,0) [0|1] ""  GW
+ SG_ AutoholdFailure : 39|1@0+ (1,0) [0|1] ""  GW
+ SG_ ESCCounter1 : 15|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ WhlTqIncReqAct : 36|1@0+ (1,0) [0|1] ""  GW
+ SG_ CDPAvailable : 37|1@0+ (1,0) [0|1] ""  EPB,GW
+ SG_ CDPActive : 53|1@0+ (1,0) [0|1] ""  EPB,GW
+ SG_ EPBRequest : 55|2@0+ (1,0) [0|3] ""  EPB,GW
+ SG_ TqDecReq : 51|12@0+ (1,-128) [-128|511] ""  GW
+ SG_ TqIncReq : 35|12@0+ (1,-128) [-128|511] ""  GW
+ SG_ TqDecReqAct : 52|1@0+ (1,0) [0|1] ""  GW
+
+BO_ 523 ESC_CCAN_F04: 8 ESP
+ SG_ Brake_Light_Control : 9|1@0+ (1,0) [0|1] ""  GW
+ SG_ BrkPrsOffsetVd : 35|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BrkPrsOffset : 34|11@0+ (0.1,0) [0|190] "" Vector__XXX
+
+BO_ 543 ESC_CCAN_F05: 8 ESP
+ SG_ HHC_Failure : 23|1@0+ (1,0) [0|1] ""  GW
+ SG_ WhlSpdRRVd : 22|1@0+ (1,0) [0|1] ""  GW
+ SG_ WhlSpdRLVd : 21|1@0+ (1,0) [0|1] ""  GW
+ SG_ WhlSpdFRVd : 20|1@0+ (1,0) [0|1] ""  GW
+ SG_ WhlSpdFLVd : 19|1@0+ (1,0) [0|1] ""  GW
+ SG_ YawRateOffset : 39|16@0+ (1,0) [0|65535] ""  APA
+ SG_ LongAccOffset : 55|10@0+ (0.01,-1.27) [-1.27|1.27] "g"  APA
+ SG_ AxCalibrationstatus : 56|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ YawRateOffsetVd : 59|1@0+ (1,0) [0|1] ""  APA
+ SG_ LongAccOffsetVd : 60|1@0+ (1,0) [0|1] ""  APA
+ SG_ Pos_Stering : 7|16@0+ (3.0517578125e-05,-1) [-1|1] "" Vector__XXX
+
+BO_ 1541 GAVM_ActionSt_H605: 8 GW
+ SG_ AVM_WorkModeFeedback : 7|4@0+ (1,0) [0|15] ""  APA
+ SG_ AVM_ViewSideFeedback : 3|3@0+ (1,0) [0|7] ""  APA
+ SG_ AVM_WorkState : 0|1@0+ (1,0) [0|1] ""  APA
+ SG_ AVM_VideoType : 11|2@0+ (1,0) [0|3] ""  APA
+ SG_ AVM_WarnType : 15|4@0+ (1,0) [0|15] ""  APA
+
+BO_ 963 GW_CCAN_01: 8 GW
+ SG_ AccPedCruGW : 23|8@0+ (1,0) [0|255] ""  ESP
+ SG_ SideSlipAngle : 7|16@0+ (0.0030517578125,-100) [-100|100] "rad" Vector__XXX
+
+
+
+CM_ SG_ 3221225472 DirectionReq_A "Direction request 0";
+CM_ BO_ 337 "D_INV DEBUG Quadrature  Current- Control related
+message used for debug";
+CM_ BO_ 336 "D_INV TORQUE";
+CM_ SG_ 336 MaxTrqAvailable_B "Maximum Torque Available_1";
+CM_ SG_ 336 MaxTrqAvailable_A "Maximum Torque Available_0";
+CM_ SG_ 336 TrqAct_B "Actual torque";
+CM_ SG_ 336 TrqAct_A "Actual Torque ";
+CM_ BO_ 326 "D_INV MECHANICAL SIGNALS ";
+CM_ SG_ 326 MechPostn_B "in-wheel- motor sensor postion motor1";
+CM_ SG_ 326 MechPostn_A "in-wheel- motor sensor postion motor0";
+CM_ SG_ 326 MechSpeed_B "in-wheel- motor1 speed";
+CM_ SG_ 326 MechSpeed_A "in-wheel- motor0 speed";
+CM_ BO_ 328 "D_INV DEBUG DIRECT CURRENT -   Control related
+message used for debug";
+CM_ BO_ 327 "D_INV ELECTRICAL SIGNALS";
+CM_ SG_ 327 I_DC_B "Estimated DC Current 1";
+CM_ SG_ 327 I_DC_A "Estimated DC Current 0";
+CM_ SG_ 322 CRC "CRC (cyclic redundancy check)";
+CM_ SG_ 322 Counter "Message Counter";
+CM_ SG_ 322 HVBatt "High Voltage Battery - same value as HVBVol in BMS_EVCAN_F00";
+CM_ SG_ 322 DirectionReq "Direction request 1";
+CM_ SG_ 322 TrqReq_B "Torque Request _1";
+CM_ SG_ 322 TrqReq_A "Torque Request_0";
+CM_ SG_ 322 ModeReq "Mode Request";
+CM_ BO_ 329 "D_INV TEMPERATURE";
+CM_ SG_ 329 MotorB_Temp "Motor n.1 Temperature";
+CM_ SG_ 329 MotorA_Temp "Motor n.0 Temperature";
+CM_ SG_ 329 InvB_Temp "Inverter n.1 Temperature";
+CM_ SG_ 329 InvA_temp "Inverter n.0 Temperature";
+CM_ SG_ 329 InvCtrlTemp "Inverter ControlBoard Temperature";
+CM_ BO_ 325 "D_INV INERTIAL MEASUREMENT UNIT_2";
+CM_ SG_ 325 gyro_y "to be defined number of bits";
+CM_ SG_ 325 gyro_x "to be defined number of bits";
+CM_ SG_ 325 yawrate "yaw rate (r)
+to be defined numeber of bits";
+CM_ BO_ 324 "D_INV INERTIAL MEASUREMENT UNIT_1";
+CM_ SG_ 324 ay "lateral acceleration";
+CM_ SG_ 324 ax "longitudinal acceleration";
+CM_ BO_ 323 "D_INV STATE - Application Related";
+CM_ SG_ 323 InvB_Sts "Inverter1 Status";
+CM_ SG_ 323 InvA_Sts "Inverter0 Status";
+CM_ SG_ 323 InvCtrl_Sts "Inverter ControlBoard Status";
+CM_ SG_ 1640 HHCmd "Slope control";
+CM_ SG_ 1640 VCUSft "Gear shift";
+CM_ SG_ 1640 VCUKeySta "Key status";
+CM_ SG_ 309 SAS_1_MsgCounter "Counter";
+CM_ SG_ 309 SAS_SteeringAngleVD "Failure Status";
+CM_ SG_ 309 SAS_CalibratedSt "Calibration Status ";
+CM_ SG_ 309 SAS_InterStFlags "Internal Status Flags ";
+CM_ SG_ 810 EBDFailed "Is the EBD running normally or not";
+CM_ SG_ 810 VehSpdVd "vehicle speed valid";
+BA_DEF_ BO_  "GenMsgCycleTime" FLOAT 0 300000;
+BA_DEF_ BO_  "GenMsgDelayTime" FLOAT 0 300000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","spontaneous","immediate";
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_  "BaudRate" FLOAT 1000 1000000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "cyclic";
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "BaudRate" 1000;
+BA_DEF_DEF_  "BusType" "";
+BA_ "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 324 10;
+BA_ "GenMsgCycleTime" BO_ 323 10;
+BA_ "GenMsgCycleTime" BO_ 565 10;
+BA_ "GenMsgCycleTime" BO_ 565 10;
+BA_ "GenMsgCycleTime" BO_ 530 10;
+BA_ "GenMsgCycleTime" BO_ 530 10;
+BA_ "GenMsgCycleTime" BO_ 681 20;
+BA_ "GenMsgCycleTime" BO_ 681 20;
+BA_ "GenMsgCycleTime" BO_ 566 20;
+BA_ "GenMsgCycleTime" BO_ 1640 10;
+BA_ "GenMsgCycleTime" BO_ 1640 10;
+BA_ "GenMsgCycleTime" BO_ 570 10;
+BA_ "GenMsgCycleTime" BO_ 570 10;
+BA_ "GenMsgSendType" BO_ 2027 1;
+BA_ "GenMsgCycleTime" BO_ 1042 100;
+BA_ "GenMsgSendType" BO_ 2019 1;
+BA_ "GenMsgCycleTime" BO_ 309 10;
+BA_ "GenMsgCycleTime" BO_ 666 50;
+BA_ "GenMsgCycleTime" BO_ 1084 200;
+BA_ "GenMsgCycleTime" BO_ 419 10;
+BA_ "GenMsgCycleTime" BO_ 421 10;
+BA_ "GenMsgCycleTime" BO_ 824 100;
+BA_ "GenMsgCycleTime" BO_ 810 10;
+BA_ "GenMsgCycleTime" BO_ 1659 200;
+BA_ "GenMsgCycleTime" BO_ 1560 200;
+BA_ "GenMsgCycleTime" BO_ 1522 100;
+BA_ "GenMsgCycleTime" BO_ 683 50;
+BA_ "GenMsgCycleTime" BO_ 717 50;
+BA_ "GenMsgCycleTime" BO_ 273 10;
+BA_ "GenMsgCycleTime" BO_ 612 50;
+BA_ "GenMsgCycleTime" BO_ 1777 1000;
+BA_ "GenMsgSendType" BO_ 1199 2;
+BA_ "GenMsgCycleTime" BO_ 517 10;
+BA_ "GenMsgCycleTime" BO_ 812 20;
+BA_ "GenMsgCycleTime" BO_ 430 10;
+BA_ "GenMsgCycleTime" BO_ 523 10;
+BA_ "GenMsgCycleTime" BO_ 543 10;
+BA_ "GenMsgCycleTime" BO_ 1541 50;
+BA_ "GenMsgCycleTime" BO_ 963 50;
+VAL_ 322 DirectionReq 3 "not allowed" 2 "back" 1 "forward" 0 "not allowed" ;
+VAL_ 322 ModeReq 3 "Service" 2 "Recovery" 1 "Normal" 0 "Idle" ;
+

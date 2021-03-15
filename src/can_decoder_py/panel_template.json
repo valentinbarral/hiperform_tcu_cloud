@@ -1,0 +1,87 @@
+{
+    "datasource": "mqttkit_1_tunit",
+    "aliasColors": {},
+    "bars": false,
+    "editable": true,
+    "error": false,
+    "fill": 1,
+    "grid": {},
+    "id": 1,
+    "legend": {
+      "alignAsTable": true,
+      "avg": true,
+      "current": true,
+      "hideEmpty": false,
+      "max": true,
+      "min": true,
+      "rightSide": false,
+      "show": true,
+      "total": false,
+      "values": true
+    },
+    "lines": true,
+    "linewidth": 2,
+    "links": [],
+    "nullPointMode": "connected",
+    "percentage": false,
+    "pointradius": 1,
+    "points": true,
+    "renderer": "flot",
+    "seriesOverrides": [],
+    "stack": false,
+    "steppedLine": false,
+    "targets": [],
+    "timeFrom": null,
+    "timeShift": null,
+    "title": "device=TP_02, site=359779080127729",
+    "tooltip": {
+      "shared": true,
+      "value_type": "cumulative",
+      "sort": 0
+    },
+    "type": "graph",
+    "gridPos": {
+      "x": 0,
+      "y": 1,
+      "w": 24,
+      "h": 8
+    },
+    "yaxes": [
+      {
+        "show": true,
+        "min": null,
+        "max": null,
+        "logBase": 1,
+        "format": "none",
+        "label": ""
+      },
+      {
+        "show": true,
+        "min": null,
+        "max": null,
+        "logBase": 1,
+        "format": "none"
+      }
+    ],
+    "xaxis": {
+      "show": true,
+      "mode": "time",
+      "name": null,
+      "values": [],
+      "buckets": null
+    },
+    "thresholds": [],
+    "options": {
+      "dataLinks": []
+    },
+    "yaxis": {
+      "align": false,
+      "alignLevel": null
+    },
+    "fillGradient": 0,
+    "dashes": false,
+    "hiddenSeries": false,
+    "dashLength": 10,
+    "spaceLength": 10,
+    "timeRegions": []
+  }

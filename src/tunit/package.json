@@ -1,0 +1,17 @@
+{
+  "name": "tunit",
+  "version": "1.0.0",
+  "description": "Tunit Doppelganger",
+  "main": "tunit_doppelganger.js",
+  "scripts": {
+    "test": "node tunit_doppelganger.js --inspect",
+    "start": "node tunit_doppelganger.js"
+  },
+  "author": "Valentin Barral",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "mqtt": "^4.2.5",
+    "n-readlines": "^1.0.1"
+  }
+}

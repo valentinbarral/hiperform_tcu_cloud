@@ -1,0 +1,30 @@
+{
+    "alias": "BMSCurrent",
+    "fields": [
+      {
+        "func": "mean",
+        "name": "BMSCurrent"
+      }
+    ],
+    "groupByTags": [],
+    "measurement": "359779080127760_00f7_sensors",
+    "query": "SELECT mean(\"BMSCurrent\") FROM \"359779080127760_00f7_sensors\" WHERE $timeFilter GROUP BY time($interval)",
+    "rawQuery": false,
+    "resultFormat": "time_series",
+    "select": [
+      [
+        {
+          "params": [
+            "BMSCurrent"
+          ],
+          "type": "field"
+        },
+        {
+          "params": [],
+          "type": "mean"
+        }
+      ]
+    ],
+    "tags": [],
+    "refId": "A"
+  }

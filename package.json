@@ -1,0 +1,82 @@
+{
+  "name": "cloudserver",
+  "description": "Hiperform Telematic Unit Cloud Server",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "Valba",
+    "email": "valba8@gmail.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/",
+    "config": "config/"
+  },
+  "engines": {
+    "node": "^11.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "test": "npm run eslint && NODE_ENV= npm run mocha",
+    "eslint": "eslint src/. test/. --config .eslintrc.json",
+    "dev": "nodemon src/",
+    "start": "node src/",
+    "mocha": "mocha test/ --recursive --exit"
+  },
+  "apidoc": {
+    "name": "Hiperform Telematic Unit Cloud Server",
+    "description": "Hiperform Telematic Unit Cloud Server API REST documentation.",
+    "url": "https://hiperform.gtec.udc.es:4434",
+    "version": "1.0.3",
+    "useHostUrlAsSampleUrl": true,
+    "sampleUrl": "https://hiperform.gtec.udc.es:4434",
+    "template": {
+      "withCompare": true,
+      "withGenerator": false
+    }
+  },
+  "dependencies": {
+    "@feathersjs/authentication": "^2.1.16",
+    "@feathersjs/authentication-jwt": "^2.0.10",
+    "@feathersjs/authentication-local": "^1.2.9",
+    "@feathersjs/configuration": "^2.0.6",
+    "@feathersjs/errors": "^3.3.6",
+    "@feathersjs/express": "^1.3.1",
+    "@feathersjs/feathers": "^3.3.1",
+    "aedes": "^0.41.0",
+    "aedes-logging": "^2.0.1",
+    "async": "^3.2.0",
+    "bcryptjs": "^2.4.3",
+    "chart.js": "^2.9.4",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "d3node-linechart": "^0.1.2",
+    "d3node-output": "^1.0.3",
+    "feathers-findone": "^1.0.2",
+    "feathers-hooks-common": "^4.20.7",
+    "feathers-mongoose": "^7.3.2",
+    "helmet": "^3.22.0",
+    "https": "^1.0.0",
+    "influx": "^5.7.0",
+    "influxdb": "0.0.1",
+    "mongodb-core": "^3.2.7",
+    "mongoose": "^5.9.10",
+    "mqtt": "^3.0.0",
+    "serve-favicon": "^2.5.0",
+    "uuid": "^8.1.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.19.4",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "host": "hiperform.gtec.udc.es",
+  "port": "4434",
+  "mongodb": "mongodb://hiperform:hiperform@127.0.0.1:27017/hiperform",
+  "logLevel": "debug",
+  "https": true
+}
